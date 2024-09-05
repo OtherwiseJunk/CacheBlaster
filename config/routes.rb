@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "welcome#index"
 
-  devise_for :user, controllers: { omniauth_callbacks: "user/omniauth_callback" }
+  devise_for :user, controllers: { omniauth_callbacks: "user/omniauth_callbacks" }
 end

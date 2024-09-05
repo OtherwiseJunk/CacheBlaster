@@ -311,5 +311,5 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  config.omniauth :discord, ENV['DISCORD_OAUTH_CLIENT_ID'], ENV['DISCORD_OAUTH_CLIENT_SECRET'], scope: 'identify email guilds', redirect_uri: 'http://localhost:3000/users/auth/discord/callback'
+  config.omniauth :discord, ENV['DISCORD_OAUTH_CLIENT_ID'], ENV['DISCORD_OAUTH_CLIENT_SECRET'], scope: 'identify email guilds', redirect_uri: 'http://localhost:3000/user/auth/discord/callback'
 end

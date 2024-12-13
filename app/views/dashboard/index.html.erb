@@ -1,0 +1,15 @@
+<aside class="sidebar">
+  <!-- User Profile Picture -->
+  <div class="user-profile">
+    <img src="<%= current_user.profile_picture %>" alt="User Profile Picture" class="profile-picture">
+  </div>
+
+  <!-- Guilds -->
+  <div class="guilds">
+    <% current_user.guild_icons.each do |guild_icon| %>
+      <div class="guild-item">
+        <img src="<%= guild_icon %>" alt="Guild Icon" class="guild-icon">
+      </div>
+    <% end %>
+  </div>
+</aside>

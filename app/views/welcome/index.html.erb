@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cache Blaster</title>
+  <%= stylesheet_link_tag 'landing_page', media: 'all', 'data-turbo-track': 'reload' %>
+</head>
 <body>
+  <canvas id="backgroundCanvas"></canvas>
   <div class="container">
     <img src="<%= asset_path 'logo.png' %>" alt="Cache Blaster Logo" class="icon">
-    <h1>Welcome to Cache Blaster</h1>
-    <p>The ultimate Discord bot experience. Connect, automate, and enhance your server with ease.</p>
-    <%= render 'shared/login_button' %>
+    <h1>Cache Blaster Config</h1>
+    <%= button_to "Log in with Discord", user_discord_omniauth_authorize_path, method: :post, data: { turbo: false }, class: "btn" %>
   </div>
 </body>
+</html>

@@ -14,12 +14,18 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= button_to "Log in with Discord", user_discord_omniauth_authorize_path, method: :post, data: { turbo: false }, class: "btn" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= yield %>
+      <% if current_user&.email.present? %>
+    <!-- Navigation Bar -->
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background-color: #333; color: white; height: 30px; display: flex; align-items: center; justify-content: flex-end; padding: 0 10px;">
+      <!-- <span>Logged in as: <%= current_user.email %></span> -->
+      <%= button_to 'Logout', logout_path, method: :delete, class: "logout-button" %>
+    </nav>
+  <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </body>

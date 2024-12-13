@@ -13,3 +13,92 @@
  *= require_tree .
  *= require_self
  */
+.logout-button {
+    background-color: #f44336;
+    /* Red background */
+    color: white;
+    /* White text */
+    border: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge the button on hover */
+}
+
+.logout-button:focus {
+    outline: none;
+    /* Remove the outline when focused */
+}
+
+/* app/assets/stylesheets/application.css */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    /* Pin the sidebar to the left */
+    top: 30px;
+    left: 0;
+    width: 5vw;
+    /* Set the width to 5% of the viewport width */
+    height: 100vh;
+    /* Full height of the page */
+    background-color: #2c2f38;
+    color: white;
+    padding: 10px;
+    overflow-y: auto;
+    /* Enable vertical scrolling inside the sidebar */
+    z-index: 1000;
+    /* Ensure the sidebar is above other content */
+}
+
+/* User Profile Section */
+.user-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Guilds Section */
+.guilds {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guild-item {
+    display: flex;
+    justify-content: center;
+}
+
+.guild-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.guild-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 5vw;
+    /* Add margin to the left to make room for the sidebar */
+}

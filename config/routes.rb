@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "welcome#index"
 
+  get '/dashboard', to: 'dashboard#index'
+  delete 'logout', to: 'application#sign_out_current_user', as: 'logout'
+
   devise_for :user, controllers: { omniauth_callbacks: "user/omniauth_callbacks" }
 end

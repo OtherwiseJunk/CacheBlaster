@@ -1,3 +1,8 @@
-<h1>Login with Discord</h1>
-
-<%= button_to "Log in with Discord", user_discord_omniauth_authorize_path, method: :post, data: {turbo: false} %>
+<body>
+  <div class="container">
+    <img src="<%= asset_path 'logo.png' %>" alt="Cache Blaster Logo" class="icon">
+    <h1>Welcome to Cache Blaster</h1>
+    <p>The ultimate Discord bot experience. Connect, automate, and enhance your server with ease.</p>
+    <%= render 'shared/login_button' %>
+  </div>
+</body>
